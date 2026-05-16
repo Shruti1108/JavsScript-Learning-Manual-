@@ -1,0 +1,29 @@
+let & const in JS
+
+way of declaring variables in JS
+
+let
+Advantage of using let as below:
+
+a. Prevent early access of the varaibale means variable call before declaration or defination is not possibe
+console.log(name)
+let name = "Shruti"  -> not possible
+
+b. Restrict usage of vaiable out of block, if variable called out of block can not be access
+for(let i=0;i<5;i++)
+{} console.log(i) - > not allowed
+
+c. can not redeclare variable
+let address ='mumbai' let address = 'mumbai'
+
+//////////////////////////////////////////////////////////////////////////
+
+Memory Allocation
+
+when we declare 
+let age
+age=20
+cosole.log(age)
+
+initially age(let) will sit in temporary dead zone area -> let age
+once we assign value to it then it goes to memory area
