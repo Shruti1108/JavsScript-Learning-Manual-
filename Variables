@@ -1,1 +1,76 @@
 How to create variables in JS and execution details
+
+Javascript follow hoisting, mean we can call or print variables even before declaring it 
+for 
+Ex: console.log(address); 
+var address; -> is possible in VS which will give error in Java.
+Because of hoisting. What does that means actually 
+
+
+Order of execution of JS code
+1. In Call stack -> Global Execution Context will be created
+
+2. Global Execution context has 2 major parts
+A. Method Context B. Code Context
+
+3. Method Context: Holds or allocate the variable names and default values in key & value format, so hoisting means Jscrip will start looking from 
+bottom how many and what all variables are created in program and allocate memory in Method Context area. Initially assign undefined value to it. 
+key       | value
+_______________________
+address   | undefined
+
+4. Code context: When pointer comes to line where varaibale is declare & define EX: var address ="Bangalore"
+from here it will pick the value of varaibale address Bangalore & put in code context area. It will also update the value in Method context area 
+from undefined to Bangalore. 
+
+3. So if we are printing variable before declaring & defining, this is allowed because default value assigned is undefined & printed same on 
+console
+In Memory
+Global Execution Context [Memory allocation + code execution]
+__________________________________
+Method Component | Code Component  
+var      address |  address ="bangalore"
+var          name|  name = "Shruti"
+__________________________________
+
+| call Stack |
+|            |
+|____________|
+|___GEC______|    
+
+Same concept goes with methods, we can call method before declaratiom
+
+hello();
+
+function hello()
+{
+console.log("Hello");
+}
+
+Global Execution Context [Memory allocation + code execution]
+__________________________________
+Method Component | Code Component
+Key        Value |  hello() call
+hello   all code | 
+__________________________________
+
+JavaScript runtime engine brings method first into memory & then execute code from code execution
+So can call method anywhere & it will work
+
+_______________________________________________________________________________________________________________________________________
+Drawback: 
+1. Allow redeclration"
+var address = "banagalore"
+var address = "Mumbai"
+allowed same var name with different values [Which is not allowed in java]
+
+2. Block scope is not applicable to var 
+for(var i=0;i<5;i++) {console.log(i)}
+console.log(i) ---> Allowed
+
+But this can led to multilple bgs into program
+
+So ES6 introduce lets & const
+______________________________________________________________
+Hoisting: Accessing variables or methpods even before declaring & defining it.
+
