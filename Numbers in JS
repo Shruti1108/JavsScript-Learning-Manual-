@@ -1,10 +1,19 @@
-<details>
-<summary>Click to Expand</summary>
 
 Numbers in JS
 
 Numbers holds both Integer and decimal numbers under number.
 
+1. To compare any 2 Integer 
+num1 === num2 -> It checks both type & value
 
+2. num/10 -> Infinity
 
-</details>
+3. -num/10 -> Infinity
+
+4. 0/0 -> Nan
+
+5. ("5"-2) ->3 Strinhg will be converted to number 
+
+6. ("abc" -2) -> NaN   illegela operations
+
+7. (Nan===NaN) -> false strich type & value check happens here  
