@@ -1,0 +1,20 @@
+All the values in loop are going to be converted into boolean 
+
+Boolean has falsey & truthy values 
+
+Truthy values are as follow:
+empty array 
+empty Objects
+
+Falsey values are as follow [8]
+empty
+0
+-0
+o(n)
+null NaN
+undefined
+false 
+
+## Notes
+
+> 💡 Literals are fixed values assigned to variables.
