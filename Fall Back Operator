@@ -15,6 +15,24 @@ null NaN
 undefined
 false 
 
-## Notes
+console.log(Boolean(1)) -> true
+console.log(Boolean(0)) -> false
 
-> 💡 Literals are fixed values assigned to variables.
+Fallback operator [|| this takes all falsey values]
+
+let username = "Shruti"
+console.log(username||"Shruti") non falsey
+o/p : Shruti
+
+let username = ""
+console.log(username||"Shruti")  falsey is empty so it will fallback to Shruti
+o/p: Shruti
+
+?? operator take care of null & undefined
+let username = 0
+console.log(username ?? "Shruti")  0 ?? Shruti
+o/p: 0
+
+let username = NaN
+console.log(username ?? "Shruti") ->   NaN ?? Shruti -> 
+o/p: NaN
