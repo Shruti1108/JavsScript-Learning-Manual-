@@ -1,0 +1,47 @@
+Array in Javascript
+
+-> Arrays are Object in JS 
+
+-> Java array & javascript array comparision
+
+Aspect |                Java                        |     Javascript
+_____________________________________________________________________________
+Size   |           Fixed                            | Dynamic grow & shrink automatically
+Typing |  Strict homogeneious                       | Hetero any data can be added including number, boolean,string, objects
+Memory |  Contigious block on heap                  | Object -like paced or dictonory 
+Defaults |   0, null, false                         |  Empty read as undefined
+Resize |  Allocate new,copy ,replace                | Automatic, amortized O(1) push
+Best for | Fixed values else use collection         | any data objects,API data, text fixtures
+
+-> An array is just an object with numeric keys plus a length property. [typeof array is object]
+
+Various declaration ways:
+const marks = [78, 84, 91, 66, 72];   // literal (preferred)
+const empty = [];                     // empty, grow later
+const demo1 = new Array(5);           // length 5, sparse
+const demo2 = Array.of(5);            // [5]
+const demo3 = Array.from("hello");    // ['h','e','l','l','o']
+
+
+EX: const profile = ["Jatin", 32, true, { role: "SDET" }, [10, 20, 30]];
+
+How to store on memory ?
+
+Refernce veariable will be stored on stack holding the address of actual array objec on heap location 
+which is a contiguous block with a length field followed by the element slots
+
+For int[] arr = { 10, 20, 30 };
+STACK MEMORY HEAP MEMORY
++------------------+ +---------------------------------+
+| arr --> 1000 | ------------> | addr 1000: |
+                               | length = 3 |
+                               | [0] = 10 |
+                               | [1] = 20 |
+                               | [2] = 30 |
+                           +---------------------------
+-->  Elements sit next to each other in memory, hardware-friendly
+--> To know the type of object if array ---- Array.isArray()
+
+
+
+
