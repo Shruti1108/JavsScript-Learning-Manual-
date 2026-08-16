@@ -1,0 +1,27 @@
+Template literals -> 
+
+Template literals = backticks + ${} for injecting anything into a string.
+
+what problem it solved
+1. Normally we use '' or " " to write simple string, but when we need to add or inject any variable value or put any particular string in 
+single or double quote, its hard to do in simple way.
+EX: console.log('I love 'javascrip' coding') or console.log("i love 'javasript' codeing") its dificult to write.
+
+2. Variable injection norally console.log('var' + variable_name) 
+
+3. Multiline always we need to use \n 
+
+4. No expression support that tends to write the code more messy 
+
+Template literal solve this proble easily with ${} and 
+we can put variable, 
+it automatically pick up multiline however we write it prints the same on console 
+support expression and more readable
+
+console.log(`i love 'javasript' `)
+
+let a = 100
+console.log(`value of a is ${a}`)
+
+let text = 'test'
+console.log(`//span[text()='${text}']`)
